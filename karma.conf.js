@@ -20,14 +20,15 @@ module.exports = function(config) {
         noInfo: true
     },
 
-    reporters: ['progress', 'notify'],
+    reporters: ['mocha', 'notify'],
 
     plugins: [
       'karma-webpack',
       'karma-mocha',
       'karma-chai',
       'karma-phantomjs-launcher',
-      'karma-notify-reporter'
+      'karma-notify-reporter',
+      'karma-mocha-reporter'
     ]
   });
 };
