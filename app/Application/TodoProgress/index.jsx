@@ -1,20 +1,18 @@
 import React from 'react';
+import classnames from 'classnames';
 
 require('./style.sass');
 
 export default class TodoProgress extends React.Component {
   render() {
-    const completed = this.props.todos.filter(todo => todo.completed).length;
-    const total = this.props.todos.length;
-
-    const width = total ? completed / total : 0;
+    const width = this.props.todos.length ? this.props.counts.complete / this.props.todos.length : 0;
     const style = { width: `${width*100}%` };
 
-    const classNames = ['TodoProgress'];
+    const classNames = classnames({
+      TodoProgress: true,
+      'TodoProgress--completed': width === 1,
+    });
 
-    if (width === 1) {
-      classNames.push('TodoProgress--completed')
-    }
-    return <div className={classNames.join(' ')} style={style}></div>;
+    return <div className={classNames} style={style} />;
   }
 }
