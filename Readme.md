@@ -1,6 +1,6 @@
 # React TODO Flummox
 
-Obligatory React TODO demo using Flummox. A work in progress.
+Obligatory React TODO demo using [Flummox](https://github.com/acdlite/flummox). A work in progress.
 
 ![Demo GIF](/screencap.gif?raw=true "Demo GIF")
 
