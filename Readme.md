@@ -2,6 +2,8 @@
 
 Obligatory React TODO demo using Flummox. A work in progress.
 
+![Demo GIF](/screencap.gif?raw=true "Demo GIF")
+
 ## Usage
 
 ```
