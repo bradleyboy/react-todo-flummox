@@ -1,10 +1,8 @@
-# YARSK
+# React TODO Flummox
 
-Yet another React starter kit. Everyone has one, here's mine. It uses Webpack, React, Babel, SASS, Autoprefixer, and Jest. It's intentionally missing a specific Flux implementation, or any other non-essential library, as I use this as a base for experimenting with various parts of the React ecosystem.
+Obligatory React TODO demo using Flummox. A work in progress.
 
 ## Usage
-
-Fork this repo, then run:
 
 ```
 npm install
