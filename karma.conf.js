@@ -14,13 +14,21 @@ module.exports = function(config) {
       'app/**/__tests__/*.js': ['webpack'],
     },
 
+    coverageReporter: {
+      dir: 'coverage',
+      reporters: [
+        {type: 'text'},
+        {type: 'html'}
+      ]
+    },
+
     webpack: require("./webpack.config.js"),
 
     webpackMiddleware: {
         noInfo: true
     },
 
-    reporters: ['mocha', 'notify'],
+    reporters: ['mocha', 'coverage', 'notify'],
 
     plugins: [
       'karma-webpack',
@@ -28,7 +36,8 @@ module.exports = function(config) {
       'karma-chai',
       'karma-phantomjs-launcher',
       'karma-notify-reporter',
-      'karma-mocha-reporter'
+      'karma-mocha-reporter',
+      'karma-coverage'
     ]
   });
 };

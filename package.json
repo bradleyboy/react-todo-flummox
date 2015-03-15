@@ -11,26 +11,29 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^1.1.4",
+    "flummox": "^3.0.1",
+    "react": "^0.13.0"
+  },
+  "devDependencies": {
     "autoprefixer-loader": "^1.2.0",
     "babel-core": "^4.7.8",
     "babel-loader": "^4.1.0",
-    "classnames": "^1.1.4",
     "css-loader": "^0.9.1",
-    "flummox": "^3.0.1",
+    "isparta-instrumenter-loader": "^0.1.1",
+    "istanbul": "^0.3.7",
     "jsx-loader": "^0.12.2",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^0.2.7",
+    "karma-mocha": "^0.1.10",
     "karma-mocha-reporter": "^1.0.1",
-    "react": "^0.13.0",
+    "karma-notify-reporter": "^0.1.1",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.5.0",
     "react-hot-loader": "^1.2.3",
     "sass-loader": "^0.4.2",
     "style-loader": "^0.8.3",
     "webpack": "^1.7.3",
     "webpack-dev-server": "^1.7.0"
-  },
-  "devDependencies": {
-    "karma-chai": "^0.1.0",
-    "karma-mocha": "^0.1.10",
-    "karma-notify-reporter": "^0.1.1",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karma-webpack": "^1.5.0"
   }
 }

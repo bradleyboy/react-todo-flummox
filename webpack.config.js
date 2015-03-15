@@ -10,6 +10,13 @@ module.exports = {
     filename: 'app.js'
   },
   module: {
+    preLoaders: [
+        {
+          test: /(\.jsx)|(\.js)$/,
+          exclude: /(__tests__|node_modules)/,
+          loader: 'isparta-instrumenter-loader'
+        },
+    ],
     loaders: [
       {
         test: /\.js$/,
