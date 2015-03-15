@@ -1,15 +1,15 @@
 import React from 'react';
+import classnames from 'classnames';
 
 export default class TodoListItem extends React.Component {
   render() {
     const id = `todolist-item-${this.props.index}`;
-    const classNames = ['TodoListItem'];
+    const classNames = classnames({
+      TodoListItem: true,
+      'TodoListItem--checked': this.props.checked,
+    })
 
-    if (this.props.checked) {
-      classNames.push('TodoListItem--checked');
-    }
-
-    return <li className={classNames.join(' ')}>
+    return <li className={classNames}>
       <input
         id={id}
         type="checkbox"

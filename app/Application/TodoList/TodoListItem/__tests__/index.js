@@ -42,7 +42,11 @@ describe('TodoListItem', function() {
     var checkbox = TestUtils.findRenderedDOMComponentWithTag(item, 'input');
     var checkboxDOM = React.findDOMNode(checkbox);
 
+    var listItem = TestUtils.findRenderedDOMComponentWithTag(item, 'li');
+    var listItemDOM = React.findDOMNode(listItem);
+
     expect(checkboxDOM.checked).to.equal(true);
+    expect(listItemDOM.className).to.equal('TodoListItem TodoListItem--checked');
   });
 
   it('displays unchecked for an incomplete item', function() {
@@ -54,7 +58,10 @@ describe('TodoListItem', function() {
 
     var checkbox = TestUtils.findRenderedDOMComponentWithTag(item, 'input');
     var checkboxDOM = React.findDOMNode(checkbox);
+    var listItem = TestUtils.findRenderedDOMComponentWithTag(item, 'li');
+    var listItemDOM = React.findDOMNode(listItem);
 
     expect(checkboxDOM.checked).to.equal(false);
+    expect(listItemDOM.className).to.equal('TodoListItem');
   });
 });
