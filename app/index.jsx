@@ -1,7 +1,7 @@
 import React from 'react';
+import FluxComponent from 'flummox/component'
 import Application from './Application';
 import TodoFlux from './Application/Flux/TodoFlux';
-import FluxComponent from 'flummox/component'
 
 const flux = new TodoFlux();
 
