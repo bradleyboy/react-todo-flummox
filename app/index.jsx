@@ -3,7 +3,7 @@ import Application from './Application';
 import TodoFlux from './Application/Flux/TodoFlux';
 import FluxComponent from 'flummox/component'
 
-let flux = new TodoFlux();
+const flux = new TodoFlux();
 
 React.render(
   <FluxComponent
