@@ -9,7 +9,7 @@ describe('TodoList', function() {
         {completed: false, text: 'Text'},
         {completed: false, text: 'Text'},
         {completed: false, text: 'Text'}
-      ]} counts={{complete: 0, incomplete: 3}} />
+      ]} progressPercentage={0} />
     );
 
     var progress = TestUtils.findRenderedDOMComponentWithTag(item, 'div');
@@ -27,7 +27,7 @@ describe('TodoList', function() {
         {completed: false, text: 'Text'},
         {completed: true, text: 'Text'},
         {completed: true, text: 'Text'}
-      ]} counts={{complete: 2, incomplete: 2}} />
+      ]} progressPercentage={50} />
     );
 
     var progress = TestUtils.findRenderedDOMComponentWithTag(item, 'div');
@@ -45,7 +45,7 @@ describe('TodoList', function() {
         {completed: true, text: 'Text'},
         {completed: true, text: 'Text'},
         {completed: true, text: 'Text'}
-      ]} counts={{complete: 4, incomplete: 0}} />
+      ]} progressPercentage={100} />
     );
 
     var progress = TestUtils.findRenderedDOMComponentWithTag(item, 'div');
