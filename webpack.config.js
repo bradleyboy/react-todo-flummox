@@ -10,20 +10,13 @@ module.exports = {
     filename: 'app.js'
   },
   module: {
-    preLoaders: [
-        {
-          test: /(\.jsx)|(\.js)$/,
-          exclude: /(__tests__|node_modules)/,
-          loader: 'isparta-instrumenter-loader'
-        },
-    ],
     loaders: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
       },
-            {
+      {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loaders: ['react-hot-loader', 'jsx-loader', 'babel-loader?blacklist=react'],
