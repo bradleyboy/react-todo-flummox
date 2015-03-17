@@ -1,20 +1,22 @@
-describe('Application', function() {
-  it('displays the header', function() {
-    var React = require('react/addons');
-    var Application = require('../index.jsx');
-    var TestUtils = React.addons.TestUtils;
-    var Flux = require('../Flux/TodoFlux');
-    var FluxContainer = require('flummox/component');
-    var flux = new Flux();
+describe('Application', () => {
+  it('displays the header', () => {
+    const React = require('react/addons');
+    const Application = require('../index.jsx');
+    const TestUtils = React.addons.TestUtils;
 
-    var application = TestUtils.renderIntoDocument(
+    const Flux = require('../Flux/TodoFlux');
+    const FluxContainer = require('flummox/component');
+
+    const flux = new Flux();
+
+    const application = TestUtils.renderIntoDocument(
       <FluxContainer
         flux={flux}
         render={() => <Application />} />
     );
 
-    var label = TestUtils.findRenderedDOMComponentWithTag(application, 'h1');
-    var labelDOM = React.findDOMNode(label);
+    const label = TestUtils.findRenderedDOMComponentWithTag(application, 'h1');
+    const labelDOM = React.findDOMNode(label);
 
     expect(labelDOM.textContent).to.equal('My Todo List');
   });

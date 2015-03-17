@@ -1,19 +1,19 @@
 describe('TodoActions', function() {
-  var React = require('react/addons');
-  var TestUtils = React.addons.TestUtils;
-  var TodoActions = require('../TodoActions.js');
+  const React = require('react/addons');
+  const TestUtils = React.addons.TestUtils;
+  const TodoActions = require('../TodoActions.js');
 
-  var action = new TodoActions();
+  const action = new TodoActions();
 
-  it('accepts a string and returns new todo object', function() {
-      var result = action.createTodo('Take out trash');
+  it('accepts a string and returns new todo object', () => {
+      const result = action.createTodo('Take out trash');
 
       expect(result.text).to.equal('Take out trash');
       expect(result.completed).to.equal(false);
   });
 
-  it('accepts an index and returns it', function() {
-      var result = action.toggleCompleted(5);
+  it('accepts an index and returns it', () => {
+      const result = action.toggleCompleted(5);
 
       expect(result).to.equal(5);
   });
