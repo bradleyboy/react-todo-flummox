@@ -4,7 +4,7 @@ describe('Application', () => {
     const Application = require('../index.jsx');
     const TestUtils = React.addons.TestUtils;
 
-    const Flux = require('../Flux/TodoFlux');
+    const Flux = require('../../Flux/TodoFlux');
     const FluxContainer = require('flummox/component');
 
     const flux = new Flux();
