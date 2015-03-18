@@ -34,7 +34,7 @@ module.exports = function(options) {
   if (options.coverage) {
     // Needs to load first to prevent linting issues
     webpackConfig.module.preLoaders = [{
-      test: /(\.jsx)|(\.js)$/,
+      test: /\.jsx?$/,
       exclude: /(__tests__|node_modules)/,
       loader: 'isparta-instrumenter-loader',
     }].concat(webpackConfig.module.preLoaders);
