@@ -20,6 +20,6 @@ export default class Application extends React.Component {
 
           <NewTodoForm {...storeState} />
         </div>;
-      }} />
+      }} />;
   }
 }

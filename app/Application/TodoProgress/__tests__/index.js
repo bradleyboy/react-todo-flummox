@@ -1,14 +1,17 @@
+/*global describe, it, expect*/
+
+import React from 'react/addons';
+import TodoProgress from '../index.jsx';
+
 describe('TodoList', () => {
-  const React = require('react/addons');
   const TestUtils = React.addons.TestUtils;
-  const TodoProgress = require('../index.jsx');
 
   it('renders the progress at 0%', () => {
     const item = TestUtils.renderIntoDocument(
       <TodoProgress todos={[
         {completed: false, text: 'Text'},
         {completed: false, text: 'Text'},
-        {completed: false, text: 'Text'}
+        {completed: false, text: 'Text'},
       ]} progressPercentage={0} />
     );
 
@@ -25,7 +28,7 @@ describe('TodoList', () => {
         {completed: false, text: 'Text'},
         {completed: false, text: 'Text'},
         {completed: true, text: 'Text'},
-        {completed: true, text: 'Text'}
+        {completed: true, text: 'Text'},
       ]} progressPercentage={50} />
     );
 
@@ -42,7 +45,7 @@ describe('TodoList', () => {
         {completed: true, text: 'Text'},
         {completed: true, text: 'Text'},
         {completed: true, text: 'Text'},
-        {completed: true, text: 'Text'}
+        {completed: true, text: 'Text'},
       ]} progressPercentage={100} />
     );
 

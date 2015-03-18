@@ -4,7 +4,7 @@ export default class TodoActions extends Actions {
   createTodo(text) {
     return {
       text,
-      completed: false
+      completed: false,
     };
   }
 

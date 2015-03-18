@@ -17,7 +17,9 @@ export default class NewTodoForm extends React.Component {
     const input = this.refs.input.getDOMNode();
     const text = input.value.trim();
 
-    if (!text.length) return;
+    if (!text.length) {
+      return;
+    }
 
     this.props.flux.getActions('todos').createTodo(text);
     input.value = '';

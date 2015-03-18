@@ -1,11 +1,13 @@
+/*global describe, it, expect*/
+
+import React from 'react/addons';
+import Application from '../index';
+import Flux from '../../Flux/TodoFlux';
+import FluxContainer from 'flummox/component';
+
 describe('Application', () => {
   it('displays the header', () => {
-    const React = require('react/addons');
-    const Application = require('../index.jsx');
     const TestUtils = React.addons.TestUtils;
-
-    const Flux = require('../../Flux/TodoFlux');
-    const FluxContainer = require('flummox/component');
 
     const flux = new Flux();
 

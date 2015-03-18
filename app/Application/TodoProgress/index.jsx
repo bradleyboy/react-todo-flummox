@@ -16,4 +16,4 @@ export default class TodoProgress extends React.Component {
 
 TodoProgress.propTypes = {
   progressPercentage: React.PropTypes.number.isRequired,
-}
+};

@@ -12,6 +12,12 @@ module.exports = function(options) {
     sassLoaders = ExtractTextPlugin.extract('style-loader', sassLoaders.substr(sassLoaders.indexOf('!')));
   }
 
+  var jsLoaders = ['babel-loader'];
+
+  if (options.lint) {
+    jsLoaders.push('eslint-loader');
+  }
+
   return {
     entry: './app/index.jsx',
     debug: !options.production,
@@ -26,12 +32,12 @@ module.exports = function(options) {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loaders: ['babel-loader'],
+          loaders: jsLoaders,
         },
         {
           test: /\.jsx$/,
           exclude: /node_modules/,
-          loaders: options.production ? ['babel-loader'] : ['react-hot-loader', 'babel-loader'],
+          loaders: options.production ? jsLoaders : ['react-hot-loader'].concat(jsLoaders),
         },
         {
           test: /\.css$/,

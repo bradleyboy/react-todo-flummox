@@ -1,8 +1,9 @@
-describe('TodoActions', function() {
-  const React = require('react/addons');
-  const TestUtils = React.addons.TestUtils;
-  const TodoActions = require('../TodoActions.js');
+/*global describe, it, expect*/
 
+import React from 'react/addons';
+import TodoActions from '../TodoActions';
+
+describe('TodoActions', function() {
   const action = new TodoActions();
 
   it('accepts a string and returns new todo object', () => {

@@ -1,15 +1,16 @@
+/*global describe, it, expect*/
+
+import React from 'react/addons';
+import TodoListItem from '../index.jsx';
+
 describe('TodoListItem', () => {
-  const React = require('react/addons');
-  const TodoListItem = require('../index.jsx');
   const TestUtils = React.addons.TestUtils;
 
-  const defaultProps = {
-    index: 1,
-    checked: true,
-    text: 'Get the mail',
-  };
-
-  const factory = (props = defaultProps) => {
+  const factory = (props = {
+      index: 1,
+      checked: true,
+      text: 'Get the mail',
+    }) => {
     return TestUtils.renderIntoDocument(
       <TodoListItem {...props} onChange={() => {}} />
     );
@@ -54,7 +55,7 @@ describe('TodoListItem', () => {
       index: 1,
       checked: false,
       text: 'Get the mail',
-    })
+    });
 
     const checkbox = TestUtils.findRenderedDOMComponentWithTag(item, 'input');
     const checkboxDOM = React.findDOMNode(checkbox);

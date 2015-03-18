@@ -7,7 +7,7 @@ export default class TodoListItem extends React.Component {
     const classNames = classnames({
       TodoListItem: true,
       'TodoListItem--checked': this.props.checked,
-    })
+    });
 
     return <li className={classNames}>
       <input

@@ -11,7 +11,7 @@ export default class TodoStore extends Store {
 
     this.state = {
       todos: [],
-      progressPercentage: 0
+      progressPercentage: 0,
     };
   }
 
