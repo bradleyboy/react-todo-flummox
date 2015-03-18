@@ -14,10 +14,6 @@ module.exports = function(options) {
 
   var jsLoaders = ['babel-loader'];
 
-  if (options.lint) {
-    jsLoaders.push('eslint-loader');
-  }
-
   return {
     entry: './app/index.jsx',
     debug: !options.production,
@@ -28,6 +24,13 @@ module.exports = function(options) {
       filename: options.production ? 'app.[hash].js' : 'app.js',
     },
     module: {
+      preLoaders: options.lint ? [
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        }
+      ] : [],
       loaders: [
         {
           test: /\.js$/,
